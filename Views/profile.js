@@ -9,10 +9,10 @@ export default function Profile() {
   const navigation = useNavigation();
 
   useEffect(() => {
-    AsyncStorage.getItem('authToken').then(token => {
+    AsyncStorage.getItem('token').then(token => {
       axios.get('accounts/users/me', {
         headers: {
-          Authorization: `Bearer ${token}`
+            'Authorization' : `Token ${token}`
         }
         }).then(response => {
         setUser(response.data);
@@ -24,7 +24,7 @@ export default function Profile() {
         
         const handleLogout = async () => {
         try {
-        await AsyncStorage.removeItem('authToken');
+        await AsyncStorage.removeItem('token');
         navigation.navigate('Login');
         } catch (error) {
         console.error(error);
