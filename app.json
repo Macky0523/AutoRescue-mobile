@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "888334a8-ca23-4c22-8d6d-39005129f341"
+      }
+    },
+    "android": {
+      "package": "com.mackysan0523.furomapp"
+    }
+  }
+}
